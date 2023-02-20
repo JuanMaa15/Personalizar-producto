@@ -11,3 +11,387 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: rgb(248, 141, 123);
+  --orangeDark: rgb(247, 106, 81);
+  --blue: rgb(30, 144, 255);
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+}
+
+.col {
+  padding: 0 1rem;
+}
+
+.column-100 {
+  width: 100%;
+}
+
+.column-75 {
+  width: 75%;
+}
+
+.column-66 {
+  width: 66.66%;
+}
+
+.column-50 {
+  width: 50%;
+}
+
+.column-33 {
+  width: 33.33%;
+}
+
+.column-25 {
+  width: 25%;
+}
+
+.center-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 2.3rem;
+  color: var(--orangeDark);
+  text-shadow: 2px 2px 6px #ccc;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--orange);
+}
+
+.subtitle {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+
+}
+
+.text-home {
+  color: #333;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+
+}
+
+.text-total {
+  color: #333;
+  margin-left: 1rem;
+}
+
+.text-red {
+  color: red;
+}
+
+.text-green {
+  color: green;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.btn-orange {
+  border: 1px solid var(--orangeDark);
+  color: var(--orangeDark);
+}
+
+.btn-orange:hover {
+  background-color: var(--orangeDark);
+  color: #fff;
+}
+
+.btn-transparente {
+  padding: 0.1rem 0.4rem;
+  font-size: 1.3rem;
+  border: 1px solid #333;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/* .page {
+  height: 100vh;
+} */
+
+.page.home,
+.page.error {
+  height: 80vh;
+}
+
+
+.cont-ingredients {
+  border: 1px solid lightblue;
+  box-shadow: 0 0 12px #ccc;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.cont-ingredients h3,
+ .cont-ingredients p,
+ .cont-ingredients h4 {
+  margin: 0.5rem 0;
+}   
+
+ .cont-ingredients p {
+  color: #333;
+  line-height: 1.5rem;
+}
+
+/* ---------- Estilos Especificos ----------------- */
+
+
+/* Cabecera */
+
+.header {
+  width: 100%;
+  background-color: var(--blue);
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo h2 {
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 6px #333;
+}
+
+.header span {
+  font-size: 2.2rem;
+  color: var(--orange);
+}
+
+.header ul{
+  display: flex;
+}
+
+.header li {
+  text-decoration: none;
+  font-size: 1.3rem;
+  list-style: none;
+}
+
+.header li a {
+  padding: 0 2rem;
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 1px 1px 3px #333;
+  transition: all 300ms;
+}
+
+.header .active,
+.header li a:hover{
+  color: var(--orange);
+}
+
+
+/* Personalize */
+
+.personalize {
+
+}
+
+.personalize .nav-lateral{
+  border: 1px solid var(--blue);
+  border-radius: 3px;
+  box-shadow: 0 2px 9px #aaa;
+}
+
+.personalize ul li{
+  list-style: none;
+}
+
+.personalize li a {
+  display: block;
+  text-decoration: none;
+  padding: 1rem;
+  border-bottom: 1px solid var(--blue);
+  font-weight: 500;
+  transition: all 300ms;
+}
+
+.personalize li:last-child a {
+  border-bottom: 0;
+}
+
+.personalize .active,
+.personalize li a:hover {
+  background: var(--blue);
+  font-weight: 600;
+  color: #fff;
+}
+
+.personalize .lista-ingredientes {
+  margin-top: 2rem;
+}
+
+.personalize .lista-ingredientes .ingrediente{
+  color: #333;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.personalize input {
+  margin-bottom: 0.5rem;
+}
+
+ 
+
+/* shopping-cart */
+
+.shopping-cart {
+
+}
+
+.shopping-cart .product-cart {
+  border: 1px solid var(--blue);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.shopping-cart .product-cart .row > div{
+  padding: 1rem 2rem;
+}
+
+.shopping-cart .product-cart .row > div:first-child{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-right: 1px solid var(--blue);
+}
+
+.shopping-cart .product-cart p {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 400;
+}
+
+.shopping-cart .total {
+  margin-top: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 9px #aaa;
+  /* border: 1px solid var(--blue); */
+}
+
+.shopping-cart .total h3 {
+  font-size: 1.7rem;
+}
+
+.shopping-cart .total h3 span {
+  display: block;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.shopping-cart .cont-total-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.shopping-cart .btn-transparente {
+  margin: 0 0.5rem;
+}
+
+/* listings */
+
+.listings {
+
+}
+
+.listings .cont-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.listings table{
+  border: 2px solid var(--blue);
+  border-collapse: collapse;
+
+}
+
+.listings table th,
+.listings table td{
+  border: 2px solid var(--blue);
+  padding: 1rem;
+}
+
+/* Detalle del producto */
+
+.detalle {
+
+}
+
+.detalle .subtitle{
+  margin: 0;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.detalle .info-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Pie de pagina */
+
+.footer  {
+  text-align: center;
+  padding: 1.3rem;
+  color: #fff;
+  background-color: var(--blue);
+  margin-top: 3rem;
+}
